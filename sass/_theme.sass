@@ -1,0 +1,5 @@
+$theme: ( "active":  #2eb9f7, "default": #a6a6a6, "first":#fff, "second":#fff, "third":#fff, "primary":#fff, "secondary":#fff, "success":#00ff00, "failure":#ff0000, "warning":#ffff00, )
+
+@each $name, $color in $theme
+  .ls-#{$name}
+      background-color: $color
