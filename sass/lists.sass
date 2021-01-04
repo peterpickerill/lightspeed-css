@@ -1,0 +1,73 @@
+@use "sass:map"
+@import typography, theme
+
+body
+    ul
+        width: 100%
+        list-style: none
+        padding: 1em 0 1em 0
+
+        li
+            font-family: $font-stack
+            font-size: $font-normal
+            color: map.get($theme, "default")
+            cursor: pointer
+            margin-top: 0.5em
+
+        li:first-child
+            margin: 0 !important
+
+        li.active
+            color: map.get($theme, "active")
+
+    ul.horizontal
+        li
+            display: inline
+            margin-left: 1rem
+
+.ticker
+    display: block
+    height: 100%
+    overflow-y: auto
+    margin: 0
+
+    *
+        margin: 0
+
+    .ticker-item
+        border: 1px solid #fff
+        margin-top: 1rem
+        padding: 0.25rem 0.75rem 0.25rem 0.75rem
+        display: grid
+        grid-template-columns: auto 1fr
+        grid-template-rows: auto 1fr auto
+        grid-template-areas: "img title" "img message"
+        border-radius: 2px
+        cursor: pointer
+
+        img
+            grid-area: img
+            max-width: 50px
+            max-height: 50px
+            background-size: cover
+            /* center the image vertically and horizontally */
+            background-position: top center
+
+            border-radius: 50%
+
+        .title
+            color: map.get($theme, "black")
+            grid-area: title
+            margin-left: 1rem
+            font-size: $font-large
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+        .message
+            color: map.get($theme, "default")
+            grid-area: message
+            margin-left: 1rem
+            font-size: $font-tiny
+
+ 

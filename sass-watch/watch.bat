@@ -1,0 +1,1 @@
+sass --watch ../sass/lightspeed.sass ../css/lightspeed.css

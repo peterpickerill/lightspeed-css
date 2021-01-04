@@ -1,0 +1,48 @@
+@use "sass:map"
+@import theme
+
+$nav-height: 4.25em
+$nav-padding: 0.1em 1em 0.1em 1em
+
+nav
+    display: grid
+    grid-template-columns: 1fr auto 1fr
+    align-items: center
+    padding: $nav-padding
+    background: #fff
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    margin: 0
+    overflow-x: auto
+    -ms-overflow-style: none
+    scrollbar-width: none
+    z-index: 9999
+
+    &-webkit-scrollbar
+        display: none
+
+    .nav-btn
+        padding: 0.5rem 1.0rem 0.5rem 1.0rem
+
+    > ul.nav-ul
+        margin: 0
+        width: 100%
+        list-style: none
+        display: flex
+        justify-content: center
+        align-items: center
+
+        li
+            border: 0
+            margin: 0rem 0.25rem 0rem 0.25rem
+            border: 0.175rem solid #fff
+            border-radius: 45px
+            padding: 0.5rem 1.0rem 0.5rem 1.0rem
+            font-size: 1.25em
+            cursor: pointer
+
+        li.active
+            background-color: map.get($theme, "active")
+            color: #ffffe0
+
+        li:not(.active):hover
+            background-color: #eee

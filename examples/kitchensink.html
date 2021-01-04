@@ -2,61 +2,258 @@
 <html>
     <head>
         <meta charset="utf8"/>
-        <title>Kitchen Sink Demo</title>
+        <title>lightspeed demo</title>
         <link rel="stylesheet" href="../css/lightspeed.css"/>
     </head>
-    <body>
-        <header>
-            
-        </header>
-        <div id="colors">
-            <h1>Colors</h1>
-            <div class="ls-box ls-active">
-                .ls-active
-            </div>
-            <div class="ls-box ls-default">
-                .ls-default
-            </div>
-            <div class="ls-box ls-first">
-                .ls-first
-            </div>
-            <div class="ls-box ls-second">
-                .ls-second
-            </div>
-            <div class="ls-box ls-third">
-                .ls-third
-            </div>
-            <div class="ls-box ls-primary">
-                .ls-primary
-            </div>
-            <div class="ls-box ls-secondary">
-                .ls-secondary
-            </div>
-            <div class="ls-box ls-success">
-                .ls-success
-            </div>
-            <div class="ls-box ls-danger">
-                .ls-danger
-            </div>
-            <div class="ls-box ls-warning">
-                .ls-warning
+    <body class="with-aside-both">
+        <div id="modal" class="modal modal-sm hidden">
+            <div class="content">
+                <header>
+                    <h1>Modal Title</h1>
+                    <button id="modalClose" class="close">Close</button>
+                </header>
+                <article>
+                    <div class="avatar">
+                        <img class="" src="https://via.placeholder.com/150"/>
+                    </div>
+                    <div class="text-center">
+                        <h2>lightspeed user</h2>
+                        <i>CSS Developer</i>
+                    </div>
+                    <form>
+                        <div class="input-group">
+                            <span>Username</span>
+                            <input type="text" placeholder="Username"/>
+                        </div>
+                        <div class="input-group">
+                            <span>Password</span>
+                            <input type="password" placeholder="Password"/>
+                        </div>
+                        <div class="input-group">
+                            <span>Date of Birth</span>
+                            <input type="date" placeholder="YYYY-MM-DD"/>
+                        </div>
+                        <div class="input-group">
+                            <span>Time of Birth</span>
+                            <input type="time" placeholder="YYYY-MM-DD"/>
+                        </div>
+                    </form>
+                </article>
+                <footer>
+                    <button class="btn-secondary btn-lg">Large</button>
+                </footer>
             </div>
         </div>
-        <div id="typography">
-            <h1>Typography</h1>
-            <h1>Header 1</h1>
-            <h2>Header 2</h2>
-            <h3>Header 3</h3>
-            <h4>Header 4</h4>
-            <h5>Header 5</h5>
-            <h6>Header 6</h6>
-            <p>Paragraph</p>
-            <i>Italic</i>
-            <bold>Bold</bold>
-        </div>
-        <div id="utilites">
-            <p class="ls-text-center">lightspeed.css</p>
-        </div>
+        <nav>
+            <div class="search-group">
+                <input id="searchBox" type="text" placeholder="Search..."/>
+                <div id="searchSpinner" class="spinner spinner-sm hidden"></div>
+            </div>
+            <ul class="nav-ul">
+                <li>Cards</li>
+                <li class="active">Colors</li>
+                <li>Typography</li>
+                <li class="notify">Alerts</li>
+                <li>Buttons</li>
+            </ul>
+            <div class="avatar float-left">
+                <img class="avatar" id="avatar" src="https://via.placeholder.com/150"/>
+                <h4>lightspeed user</h4>
+                <span>Manager</span>
+            </div>
+        </nav>
+        <aside class="hidden">
+            <ul class="text-large">
+                <li>One</li>
+                <li class="active">Two</li>
+                <li>Three</li>
+                <li>Four</li>
+            </ul>
+        </aside>
+        <main style="padding:0 1rem 0 1rem">
+            <div class="loader">
+                <div class="spinner spinner-lg"></div>
+            </div>
+            <div class="content hidden">
+                <ul class="horizontal">
+                    <li>One</li>
+                    <li class="active notify">Two</li>
+                    <li>Three</li>
+                    <li>Four</li>
+                </ul>
+                <table>
+                    <thead>
+                        <th>One</th>
+                        <th>Two</th>
+                        <th>Three</th>
+                        <th>Four</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>One</td>
+                            <td>Two</td>
+                            <td>Three</td>
+                            <td>Four</td>
+                        </tr>
+                        <tr>
+                            <td>One</td>
+                            <td>Two</td>
+                            <td>Three</td>
+                            <td>Four</td>
+                        </tr>
+                        <tr>
+                            <td>One</td>
+                            <td>Two</td>
+                            <td>Three</td>
+                            <td>Four</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="cards">
+                    <h1>Cards</h1>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Normal Card</h4>
+                        </div>
+                        <div class="card-body">
+                            Hello World
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn">Ok</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="inputs">
+                    <input type="text"/>
+                </div>
+                <div id="colors">
+                    <h1>Colors</h1>
+                    <div class="grid-stack">
+                        <div class="grid-cell bg-active p-5">
+                            .bg-active
+                        </div>
+                        <div class="grid-cell bg-default p-5">
+                            .bg-default
+                        </div>
+                        <div class="grid-cell bg-first p-5">
+                            .bg-first
+                        </div>
+                        <div class="grid-cell bg-second p-5">
+                            .bg-second
+                        </div>
+                        <div class="grid-cell bg-third p-5">
+                            .bg-third
+                        </div>
+                        <div class="grid-cell bg-primary p-5">
+                            .bg-primary
+                        </div>
+                        <div class="grid-cell bg-secondary p-5">
+                            .bg-secondary
+                        </div>
+                        <div class="grid-cell bg-success p-5">
+                            .bg-success
+                        </div>
+                        <div class="grid-cell bg-failure p-5">
+                            .bg-failure
+                        </div>
+                        <div class="grid-cell bg-warning p-5">
+                            .bg-warning
+                        </div>
+                    </div>
+                </div>
+                <div id="typography">
+                    <h1>Typography</h1>
+                    <h1>Header 1</h1>
+                    <h2>Header 2</h2>
+                    <h3>Header 3</h3>
+                    <h4>Header 4</h4>
+                    <h5>Header 5</h5>
+                    <h6>Header 6</h6>
+                    <p>Paragraph</p>
+                    <i>Italic</i>
+                    <bold>Bold</bold>
+                </div>
+                <div id="buttons">
+                    <div id="button-colors">
+                        <button class="btn-default">Default</button>
+                        <button class="btn-primary">Primary</button>
+                        <button class="btn-secondary">Secondary</button>
+                    </div>
+                    <div id="button-sizes">
+                        <button class="btn-default btn-sm">Small</button>
+                        <button class="btn-primary btn-normal">Normal</button>
+                        <button class="btn-secondary btn-lg">Large</button>
+                    </div>
+                </div>
+                <div id="spinners">
+                    <h1>Spinners</h1>
+                    <div class="spinner spinner-sm"></div>
+                    <div class="spinner spinner-md"></div>
+                    <div class="spinner spinner-lg"></div>
+                </div>
+                <div id="utilites">
+                    <p class="bg-text-center">lightspeed.css</p>
+                </div>
+            </div>
+        </main>
+        <aside class="aside-right p-5" id="aside-right">
+            <div class="loader">
+                <div class="spinner spinner-lg"></div>
+            </div>
+            <div class="ticker hidden">
+                <div class="ticker-item">
+                    <img src="https://via.placeholder.com/150"/>
+                    <h4 class="title">Hello World</h4>
+                </div>
+                <div class="ticker-item">
+                    <img src="https://via.placeholder.com/150"/>
+                    <h4 class="title">John Doe</h4>
+                    <p class="message">Are you ready to go tonight to the thunderdone?</p>
+                </div>
+                <div class="ticker-item">
+                    <img src="https://via.placeholder.com/150"/>
+                    <h4 class="title">Hello World</h4>
+                </div>
+            </div>
+        </aside>
     </body>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            window.timeouts = {};
+            document.getElementById("searchBox").onkeyup = function() {
+                if (this.value.length == 0) {
+                    return;
+                }
+                document.getElementById("searchSpinner").classList.remove("hidden");
+                clearTimeout(window.timeouts["searchSpinner"] ?? -1);
+                window.timeouts["searchSpinner"] = setTimeout(function() {
+                    document.getElementById("searchSpinner").classList.add("hidden");
+                },250);
+            }
+            document.querySelectorAll("nav ul li").forEach(function(el) {
+                el.onclick = function() {
+                    Array.from(this.parentNode.children).forEach(function(el) {
+                        el.classList.remove("active");
+                    });
+                    el.classList.add("active");
+                }
+            });
+            
+            document.getElementById("avatar").onclick = function() {
+               document.getElementById("modal").classList.remove("hidden"); 
+            }
+
+            document.getElementById("modalClose").onclick = function() {
+                document.getElementById("modal").classList.add("hidden");
+            }
+
+            setTimeout(function() {
+                document.querySelector("#aside-right .loader").classList.add("hidden");
+                document.querySelector("#aside-right .ticker").classList.remove("hidden");
+                document.querySelector("main .loader").classList.add("hidden");
+                document.querySelector("main .content").classList.remove("hidden");
+            }, 1000);
+        });
+    </script>
 </html>

@@ -1,0 +1,29 @@
+@use "sass:map"
+@import theme
+    
+input
+    outline: none //google chrome reset
+    background: #fff
+    padding:0.65rem 0.75rem 0.65rem 1.25rem
+    border:0.1rem solid #ccc
+    border-radius: 45px
+    font-size:1.25rem
+    max-width: calc(100% - 2.25rem)
+
+input:focus
+    border-color: map.get($theme, "active")
+
+.input-group
+    margin-top: 1rem
+    span
+        padding-left: 1.25rem
+
+.search-group
+    display: flex
+    justify-content: left
+    align-items: center
+    .spinner
+        margin-left: 0.5rem
+        transition: 1s
+        left: 0
+        

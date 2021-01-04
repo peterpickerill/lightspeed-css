@@ -1,0 +1,61 @@
+.modal
+    position: absolute
+    left:0
+    right:0
+    top:0
+    width:100vw
+    height:100vh
+    z-index:99999
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    background: rgba(0, 0, 0, 0.25)
+
+    header
+        grid-area: header
+        display: grid
+        grid-template-columns: 5fr 1fr
+
+    footer
+        grid-area: footer
+
+    article
+        grid-area: article
+        overflow-y: auto
+
+    .content
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        background: #ffffff
+        height: 90vh
+        width: 60vw
+        margin: auto
+        padding:2rem
+        display: grid
+        grid-template-rows: auto 1fr auto
+        grid-template-areas: 'header' 'article' 'footer'
+        border-radius:1em
+    
+    .close
+        float: right
+    
+    h1
+        overflow: hidden
+        max-width: 100%
+        font-size:35px
+        overflow-wrap: break-word
+
+    .avatar
+        padding: 1rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        img
+            width: 150px
+            height: 150px
+            background-size: cover
+            background-position: top center
+            border-radius: 50%
+
+.modal-sm
+    .content
+        width: 30vw
