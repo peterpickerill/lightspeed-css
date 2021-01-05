@@ -1,0 +1,16 @@
+@use "sass:map"
+@import theme
+
+::-webkit-scrollbar
+  width: 0.25rem
+
+::-webkit-scrollbar-track
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb
+  background: map.get($theme, "active")
+  border-radius: 45px
+
+  &:hover
+    background: map.get($theme, "active")
+    cursor: scroll

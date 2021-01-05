@@ -1,0 +1,21 @@
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+form input {
+  width: 100%; }
+
+.hidden {
+  display: none; }
+
+.p-5 {
+  padding: 5px; }
+
+.center-parent {
+  display: flex;
+  justify-content: center; }
