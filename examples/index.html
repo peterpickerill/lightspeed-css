@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../sass/lightspeed.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link href="../thirdParty/prism/prism.css" rel="stylesheet" />
+    <script src="../javascript/index.js"></script>
+    <script src="../thirdParty/prism/prism.js"></script>
+    <title>Lightspeed CSS</title>
+</head>
+
+<body>
+    <a href="https://github.com/peterpickerill/lightspeed-css" target="_blank">
+        <div class="corner black">
+            <i class="fab fa-github text-white"></i>
+        </div>
+    </a>
+    <header>
+        <img src="../images/logo.svg" />
+        <h4>Version: 0.0.1</h4>
+    </header>
+    <section class="inner">
+        <nav>
+            <ul>
+                <li class="active">Banners</li>
+                <li>Popups</li>
+                <li>Tables</li>
+                <li>Tags</li>
+                <li><i class="fas fa-home"></i></li>
+                <li>Inputs</li>
+                <li>Buttons</li>
+                <li>Forms</li>
+                <li>Navigation</li>
+            </ul>
+            <ul id="banner-color-selector" class="color-selector">
+                <li class="blue"></li>
+                <li class="green"></li>
+                <li class="purple"></li>
+                <li class="orange"></li>
+                <li class="black"></li>
+            </ul>
+        </nav>
+        <main>
+            <aside>
+                <div id="banners-code">
+                    <pre>
+                        <code class="language-html line-numbers">
+&lt;div id=&quot;banner-with-icon&quot; class=&quot;banner with-icon blue&quot;&gt;
+    &lt;div class=&quot;banner-icon&quot;&gt;
+        &lt;i class=&quot;fas fa-exclamation-circle&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;body&quot;&gt;
+        &lt;p&gt;Hello world&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button&gt;
+        &lt;i class=&quot;fas fa-eye-slash&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;banner&quot; class=&quot;banner&quot;&gt;
+    &lt;div class=&quot;body&quot;&gt;
+        &lt;p&gt;Hello world&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button&gt;
+        &lt;i class=&quot;fas fa-eye-slash&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            </aside>
+            <article>
+                <div id="banners">
+                    <div class="separator-left">
+                        <label class="text-left">Banners</label>
+                        <hr>
+                    </div>
+                    <div class="example-rows">
+                        <div id="banner-with-icon" class="banner with-icon">
+                            <div class="banner-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="body">
+                                <p>Hello world</p>
+                            </div>
+                            <button>
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
+                        <div id="banner" class="banner">
+                            <div class="body">
+                                <p>Hello world</p>
+                            </div>
+                            <button>
+                                <i class="fas fa-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="alerts">
+                    <div class="separator-left">
+                        <label class="text-left">Alerts</label>
+                        <hr>
+                    </div>
+                    <div class="examples">
+                        <div class="alert" id="alert">
+                            <div class="body">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <h3>Alert!</h3>
+                                <span>
+                                    I think that you should take a look at this!
+                                </span>
+                            </div>
+                            <button>
+                                Dismiss
+                            </button>
+                        </div>
+                        <div class="alert small" id="alert-small">
+                            <div class="body">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <h3>Alert!</h3>
+                                <span>
+                                    I think that you should take a look at this!
+                                </span>
+                            </div>
+                            <button>
+                                Dismiss
+                            </button>
+                        </div>
+                        <div class="prompt" id="prompt">
+                            <div class="body">
+                                <label>Prompt</label>
+                                <input placeholder="Type Something..." />
+                            </div>
+                            <button>
+                                Submit
+                            </button>
+                        </div>
+                        <div class="prompt small" id="prompt-small">
+                            <div class="body">
+                                <label>Prompt</label>
+                                <input placeholder="Type Something..." />
+                            </div>
+                            <button>
+                                Submit
+                            </button>
+                        </div>
+                        <div class="confirm" id="confirm-two-btn">
+                            <div class="body">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <h3>Alert!</h3>
+                                <span>
+                                    I think that you should take a look at this!
+                                </span>
+                            </div>
+                            <div class="btn-options">
+                                <button>
+                                    Cancel
+                                </button>
+                                <button>
+                                    Ok
+                                </button>
+                            </div>
+                        </div>
+                        <div class="confirm" id="confirm-three-btn">
+                            <div class="body">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <h3>Alert!</h3>
+                                <span>
+                                    I think that you should take a look at this!
+                                </span>
+                            </div>
+                            <div class="btn-options">
+                                <button>
+                                    Cancel
+                                </button>
+                                <button>
+                                    Maybe
+                                </button>
+                                <button>
+                                    Ok
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul id="alert-color-selector" class="color-selector">
+                        <li class="blue"></li>
+                        <li class="green"></li>
+                        <li class="purple"></li>
+                        <li class="orange"></li>
+                        <li class="black"></li>
+                    </ul>
+                </div>
+                <div id="Styling">
+                    <div class="separator-left">
+                        <label class="text-left">Inputs</label>
+                        <hr>
+                    </div>
+                    <input placeholder="Search" />
+                    <select>
+                        <option>Hello</option>
+                    </select>
+                    <div class="select">
+                        <div class="option">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="tables">
+                    <div class="separator-left">
+                        <label class="text-left">tables</label>
+                        <hr>
+                    </div>
+                    <section class="tables">
+                        <p>Lightspeed uses set colours to give it's style, you can change these in the
+                            <code>theme.sass</code> file
+                        </p>
+                        <table id="table">
+                            <thead>
+                                <th>Lightspeed Name</th>
+                                <th>Hex</th>
+                                <th>Used for</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Primary</td>
+                                    <td>Light Blue</td>
+                                    <td>Navigation</td>
+                                </tr>
+                                <tr>
+                                    <td>Secondary</td>
+                                    <td>Light Green</td>
+                                    <td>Tags</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <ul id="table-color-selector" class="color-selector">
+                            <li class="blue"></li>
+                            <li class="green"></li>
+                            <li class="purple"></li>
+                            <li class="orange"></li>
+                            <li class="black"></li>
+                        </ul>
+                    </section>
+                </div>
+                <div id="buttons">
+                    <div class="separator-left">
+                        <label class="text-left">Buttons</label>
+                        <hr>
+                    </div>
+                    <section>
+                        <button id="button" class="blue">Hello World</button>
+                    </section>
+                    <ul id="button-color-selector" class="color-selector">
+                        <li class="blue"></li>
+                        <li class="green"></li>
+                        <li class="purple"></li>
+                        <li class="orange"></li>
+                        <li class="black"></li>
+                    </ul>
+                </div>
+                <div id="forms">
+                    <div class="separator-left">
+                        <label class="text-left">Buttons</label>
+                        <hr>
+                    </div>
+                    <section>
+                        <button id="button" class="blue">Hello World</button>
+                    </section>
+                    <ul id="button-color-selector" class="color-selector">
+                        <li class="blue"></li>
+                        <li class="green"></li>
+                        <li class="purple"></li>
+                        <li class="orange"></li>
+                        <li class="black"></li>
+                    </ul>
+                </div>
+                <div id="tags">
+                    <div class="separator-left">
+                        <label class="text-left">Tags</label>
+                        <hr>
+                    </div>
+                    <section>
+                        <ul id="tag" class="tags">
+                            <li>C#</li>
+                            <li>Microsoft Azure</li>
+                            <li>Angular</li>
+                            <li>Python</li>
+                            <li>MongoDB</li>
+                        </ul>
+
+                    </section>
+                </div>
+            </article>
+        </main>
+
+    </section>
+</body>
+
+</html>

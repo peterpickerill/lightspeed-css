@@ -1,0 +1,27 @@
+@use "sass:map"
+@import theme, typography
+
+.corner
+    width: 0px
+    height: 0px
+    border: 77px solid
+    border-bottom-color: transparent !important
+    border-top-color: map-get($theme, "default")
+    border-right-color: map-get($theme, "default")
+    border-left-color: transparent !important
+    position: absolute
+    right: 0px
+    z-index: 2
+    cursor: pointer
+
+    i
+        position: relative
+        top: -4rem
+        font-size: 4rem
+        z-index: 3
+        transform: translate3d(-2rem, -2rem)
+
+@each $name, $color in $theme
+  .corner.#{$name}
+    border-top-color: $color
+    border-right-color: $color

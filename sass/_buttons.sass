@@ -1,46 +1,28 @@
-@import typography
+@import typography, theme
 
-button, .btn
-    background-color: white
-    border: 0
-    padding: 1rem 1.5rem 1rem 1.5rem
-    font-size: $font-normal
-    font-family: $font-stack
-    box-shadow: 0px 5px 10px #0000004b
-    transition: all .3s
-    cursor: pointer
-    border-radius: 5px
-    text-transform: uppercase
-    text-align: center
-    color:#fff
-    &:hover
-        transform: translateZ(0)
-        backface-visibility: hidden
-        filter: blur(0)
-        box-shadow: 0px 15px 25px -5px #00000080
-        transform: scale(1.03)
-    &:active
-        transform: translateZ(0)
-        filter: blur(0)
-        backface-visibility: hidden
-        box-shadow: 0px 4px 8px #03030370
-        transform: scale(.98)
+button
+  background-color: map-get($theme, "active")
+  outline:1px solid map-get($theme, "white")
+  border: 0
+  outline-offset:0
+  padding: .4rem .8rem .4rem .8rem
+  font-size: $font-normal
+  font-family: $font-stack
+  cursor: pointer
+  border-radius: .5rem
+  text-align: center
+  color: map-get($theme, "white")
 
-.btn-img img
-    width: 2em
-    height: 2rem
+  &:hover
+    color: map-get($theme, "default")
 
-.btn-sm
-    padding: 0.2rem 0.75rem 0.2rem 0.75rem
-    font-size: $font-small
+@each $name, $color in $theme
+  button.#{$name}
+    background:$color
 
-.btn-normal
-    padding: 0.5rem 1.0rem 0.5rem 1.0rem
-    font-size: $font-normal
+@keyframes color-change
+  0%
+    color: map-get($theme, "default")
 
-.btn-lg
-    padding: 0.75rem 0.85rem 0.75rem 0.85rem
-    font-size: $font-large
-
-.btn:hover
-    cursor: pointer
+  100%
+    color: map-get($theme, "white")

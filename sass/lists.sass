@@ -1,18 +1,17 @@
 @use "sass:map"
 @import typography, theme
 
-body
-    ul
-        width: 100%
-        list-style: none
-        padding: 1em 0 1em 0
-
-        li
-            font-family: $font-stack
-            font-size: $font-normal
-            color: map.get($theme, "default")
-            cursor: pointer
-            margin-top: 0.5em
+ul:not(.tags)
+    list-style: none
+    padding: 0
+    
+    li
+        padding: .5rem .5rem .5rem .5rem
+        font-family: $font-stack
+        font-size: $font-normal
+        color: #000
+        cursor: pointer
+        margin-top: 0.1em
 
         li:first-child
             margin: 0 !important
@@ -25,25 +24,98 @@ body
             display: inline
             margin-left: 1rem
 
+    ul.tabs
+        height: 2.5rem
+        padding: 0 0.5rem 0 0.5rem
+        margin: 0
+        width: -moz-fit-content
+        width: fit-content
+        list-style: none
+        white-space: nowrap
+        li
+            display: inline-block
+            height: 1.5rem
+            border: 1px solid map.get($theme, "border")
+            border-bottom: 0
+            border-radius: 5px 5px 0 0
+            max-width: max(10vw, 20rem)
+            padding: 0.5rem 0.75rem 0.5rem 0.5rem
+
+    ul.list-standard
+        height: 100%
+        margin: 0
+        background: #fff
+        padding: 0
+        overflow-y: auto
+
+        li
+            padding: 0.5rem
+            margin-top: 0.2rem
+
+        li:hover
+            background: map-get($theme, "active")
+            color: map-get($theme, "white")
+
+        li > i
+            margin-right: 1rem
+
+    ul.selectable-list
+        height: 100%
+        overflow-y: auto
+        padding: 0
+
+        *
+            color: map-get($theme, "black")
+            font-size: $font-small
+
+        li
+            display: grid
+            grid-auto-rows: 1fr
+            grid-auto-columns: auto 1fr 1fr
+            grid-template-areas: "input title amount"
+            margin: 0
+            padding: 0
+
+            .list-key
+                grid-area: title
+                display: flex
+                justify-content: left
+                align-items: center
+                margin-left: 1.5rem
+
+            .toggle-container
+                grid-area: input
+                display: flex
+                justify-content: center
+                align-items: center
+
+            .list-value
+                grid-area: amount
+                display: flex
+                justify-content: right
+                align-items: center
+                font-size: $font-large
+
 .ticker
     display: block
     height: 100%
     overflow-y: auto
     margin: 0
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem
 
     *
         margin: 0
 
     .ticker-item
-        border: 1px solid #fff
         margin-top: 1rem
-        padding: 0.25rem 0.75rem 0.25rem 0.75rem
         display: grid
         grid-template-columns: auto 1fr
         grid-template-rows: auto 1fr auto
         grid-template-areas: "img title" "img message"
-        border-radius: 2px
         cursor: pointer
+
+        &:hover
+            transform: scale(1.05)
 
         img
             grid-area: img
@@ -69,5 +141,3 @@ body
             grid-area: message
             margin-left: 1rem
             font-size: $font-tiny
-
- 

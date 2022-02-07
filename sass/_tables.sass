@@ -3,23 +3,61 @@
 
 table
   width: 100%
-  border-collapse: collapse
+  table-layout: fixed
+  border: 1px solid map.get($theme, "active")
+  border-radius: 15px
+  padding: .1rem
 
-/* Zebra striping
+  tr>td
+  background: #efefef96
 
-tr:nth-of-type(odd)
-  background: #eee
+  th
+    background: map.get($theme, "active")
+    color: white
+    font-weight: bold
 
-th
-  background: map.get($theme, "primary")
-  color: white
-  font-weight: bold
+    &:first-child
+      border-radius: .75rem 0 0 0
 
-td, th
-  padding: 10px
-  border: 1px solid map.get($theme, "border")
-  text-align: left
-  font-size: 18px
+    &:last-child
+      border-radius: 0 .75rem 0 0
+
+  &.green
+    border: 1px solid map.get($theme, "secondary")
+
+    th
+      background: map.get($theme, "secondary")
+
+  &.purple
+    border: 1px solid map.get($theme, "purple")
+
+    th
+      background: map.get($theme, "purple")
+
+  &.black
+    border: 1px solid map.get($theme, "black")
+
+    th
+      background: map.get($theme, "black")
+
+
+  &.orange
+    border: 1px solid map.get($theme, "orange")
+
+    th
+      background: map.get($theme, "orange")
+
+  td, th
+    padding: 10px
+    border: 0
+    text-align: left
+    font-size: 18px
+
+  tr:last-child
+    >td:first-child
+      border-radius: 0 0 0 .75rem
+    >td:last-child
+      border-radius: 0 0 .75rem 0
 
 /* 
  *Max width before this PARTICULAR table gets nasty

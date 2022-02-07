@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf8"/>
         <title>lightspeed demo</title>
-        <link rel="stylesheet" href="../css/lightspeed.css"/>
+        <!--<link rel="stylesheet" href="../thirdParty/fontawesome/css/all.min.css"/>-->
+        <link rel="stylesheet" href="../sass/lightspeed.css"/>
     </head>
     <body class="grid with-aside-both">
         <div id="modal" class="modal modal-sm hidden">
@@ -45,186 +46,169 @@
             </div>
         </div>
         <nav>
-            <div class="search-group">
-                <input id="searchBox" type="text" placeholder="Search..."/>
-                <div id="searchSpinner" class="spinner spinner-sm hidden"></div>
+            <div class="avatar flex-start">
+                <i class="fas fa-coins fa-2x text-gold" id="quick-money"></i>
+                <div class="input-group">
+                    <i class="fa fa-search fa-1x icon"></i>
+                    <input id="searchBox" type="text" placeholder="Search..."/>
+                    <div id="searchSpinner" class="spinner spinner-sm hidden"></div>
+                </div>
             </div>
             <ul class="nav-ul">
-                <li>Cards</li>
-                <li class="active">Colors</li>
+                <li class="active">Products</li>
+                <li>Colors</li>
                 <li>Typography</li>
                 <li class="notify">Alerts</li>
                 <li>Buttons</li>
             </ul>
-            <div class="avatar float-left">
-                <img class="avatar" id="avatar" src="https://via.placeholder.com/150"/>
-                <h4>lightspeed user</h4>
-                <span>Manager</span>
+            <div class="avatar">
+                <i class="far fa-bell fa-2x"></i>
+                <i class="far fa-comments fa-2x" id="messages"></i>
+                <img id="avatar" src="https://via.placeholder.com/150"/>
             </div>
         </nav>
-        <aside class="hidden">
-            <ul class="text-large">
-                <li>One</li>
-                <li class="active">Two</li>
-                <li>Three</li>
-                <li>Four</li>
-            </ul>
+        <aside class="aside-left" id="aside-left">
+            <div class="aside-content department-totals">
+                <div class="radio-group time-intervals">
+                    <input type="radio" id="radio-year" hidden name="time-unit"/>
+                    <label class="radio-btn" for="radio-year">Year</label>
+                    <input type="radio" id="radio-month" hidden name="time-unit"/>
+                    <label class="radio-btn" for="radio-month">Month</label>
+                    <input type="radio" id="radio-week" hidden name="time-unit"/>
+                    <label class="radio-btn" for="radio-week">Week</label>
+                    <input type="radio" id="radio-day" hidden name="time-unit"/>
+                    <label class="radio-btn" for="radio-day">Day</label>
+                    <input type="radio" id="radio-hour" hidden name="time-unit"/>
+                    <label class="radio-btn" for="radio-hour">Hour</label>
+                </div>
+                <img src="https://via.placeholder.com/250"/>
+                <ul class="selectable-list" id="department-totals">
+                    <li class="list-item">
+                        <h3>Sweets</h3>
+                        <input type="checkbox" class="toggle"/>
+                        <h3 class="text-right">10.00</h3>
+                    </li>
+                </ul>
+                <div class="total">
+                    <h2 class="key">Total</h2>
+                    <h2 class="value">100.00</h2>
+                </div>
+            </div>
         </aside>
-        <main style="padding:0 1rem 0 1rem">
+        <main>
             <div class="loader">
                 <div class="spinner spinner-lg"></div>
             </div>
-            <div class="content hidden">
+            <div class="alert bg-default hide" id="alert">
+                <div class="alert-inner">
+                    <p class="alert-message">118 Results</p>
+                </div>
+            </div>
+            <article style="padding:0 1rem 0 1rem">
                 <ul class="horizontal">
-                    <li>One</li>
-                    <li class="active notify">Two</li>
+                    <li class="active">Products</li>
+                    <li>Two</li>
                     <li>Three</li>
                     <li>Four</li>
                 </ul>
-                <table>
-                    <thead>
-                        <th>One</th>
-                        <th>Two</th>
-                        <th>Three</th>
-                        <th>Four</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>One</td>
-                            <td>Two</td>
-                            <td>Three</td>
-                            <td>Four</td>
-                        </tr>
-                        <tr>
-                            <td>One</td>
-                            <td>Two</td>
-                            <td>Three</td>
-                            <td>Four</td>
-                        </tr>
-                        <tr>
-                            <td>One</td>
-                            <td>Two</td>
-                            <td>Three</td>
-                            <td>Four</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div id="cards">
-                    <h1>Cards</h1>
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Normal Card</h4>
-                        </div>
-                        <div class="card-body">
-                            Hello World
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn">Ok</button>
+                <div class="grid-stack" id="product-images">
+                    <div class="cell">
+                        <div class="product">
+                            <img src="https://via.placeholder.com/150" alt="product image"/>
+                            <h3>Product Name</h3>
+                            <p>0.99 per Unit</p>
                         </div>
                     </div>
                 </div>
-                <div id="inputs">
-                    <input type="text"/>
-                </div>
-                <div id="colors">
-                    <h1>Colors</h1>
-                    <div class="grid-stack">
-                        <div class="grid-cell bg-active p-5">
-                            .bg-active
-                        </div>
-                        <div class="grid-cell bg-default p-5">
-                            .bg-default
-                        </div>
-                        <div class="grid-cell bg-first p-5">
-                            .bg-first
-                        </div>
-                        <div class="grid-cell bg-second p-5">
-                            .bg-second
-                        </div>
-                        <div class="grid-cell bg-third p-5">
-                            .bg-third
-                        </div>
-                        <div class="grid-cell bg-primary p-5">
-                            .bg-primary
-                        </div>
-                        <div class="grid-cell bg-secondary p-5">
-                            .bg-secondary
-                        </div>
-                        <div class="grid-cell bg-success p-5">
-                            .bg-success
-                        </div>
-                        <div class="grid-cell bg-failure p-5">
-                            .bg-failure
-                        </div>
-                        <div class="grid-cell bg-warning p-5">
-                            .bg-warning
-                        </div>
-                    </div>
-                </div>
-                <div id="typography">
-                    <h1>Typography</h1>
-                    <h1>Header 1</h1>
-                    <h2>Header 2</h2>
-                    <h3>Header 3</h3>
-                    <h4>Header 4</h4>
-                    <h5>Header 5</h5>
-                    <h6>Header 6</h6>
-                    <p>Paragraph</p>
-                    <i>Italic</i>
-                    <bold>Bold</bold>
-                </div>
-                <div id="buttons">
-                    <div id="button-colors">
-                        <button class="btn-default">Default</button>
-                        <button class="btn-primary">Primary</button>
-                        <button class="btn-secondary">Secondary</button>
-                    </div>
-                    <div id="button-sizes">
-                        <button class="btn-default btn-sm">Small</button>
-                        <button class="btn-primary btn-normal">Normal</button>
-                        <button class="btn-secondary btn-lg">Large</button>
-                    </div>
-                </div>
-                <div id="spinners">
-                    <h1>Spinners</h1>
-                    <div class="spinner spinner-sm"></div>
-                    <div class="spinner spinner-md"></div>
+            </article>
+        </main>
+        <aside class="aside-right hide" id="aside-right">
+            <div class="aside-content">
+                <div class="loader">
                     <div class="spinner spinner-lg"></div>
                 </div>
-                <div id="utilites">
-                    <p class="bg-text-center">lightspeed.css</p>
-                </div>
-            </div>
-        </main>
-        <aside class="aside-right p-5" id="aside-right">
-            <div class="loader">
-                <div class="spinner spinner-lg"></div>
-            </div>
-            <div class="ticker hidden">
-                <div class="ticker-item">
-                    <img src="https://via.placeholder.com/150"/>
-                    <h4 class="title">Hello World</h4>
-                </div>
-                <div class="ticker-item">
-                    <img src="https://via.placeholder.com/150"/>
-                    <h4 class="title">John Doe</h4>
-                    <p class="message">Are you ready to go tonight to the thunderdone?</p>
-                </div>
-                <div class="ticker-item">
-                    <img src="https://via.placeholder.com/150"/>
-                    <h4 class="title">Hello World</h4>
+                <div class="ticker hidden">
+                    <div class="ticker-item">
+                        <img src="https://via.placeholder.com/150"/>
+                        <h4 class="title">Hello World</h4>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="https://via.placeholder.com/150"/>
+                        <h4 class="title">John Doe</h4>
+                        <p class="message">Are you ready to go tonight to the thunderdone?</p>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="https://via.placeholder.com/150"/>
+                        <h4 class="title">Hello World</h4>
+                    </div>
                 </div>
             </div>
         </aside>
+        <footer id="footer">
+            <ul class="tabs">
+                <li class="bg-danger text-white" id="issues-tab">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Issues</span>
+                </li>
+            </ul>
+            <div class="footer-header bg-danger">
+                <div class="input-group">
+                    <i class="fa fa-search fa-1x icon"></i>
+                    <input id="issuesSearch" class="rounding-0" type="text" placeholder="Search Issues..."/>
+                    <div id="searchSpinner" class="spinner spinner-sm hidden"></div>
+                </div>
+                <span class="text-white"><span>1000</span>/<span>1000</span> issues displayed</span>
+            </div>
+            <div class="footer-content bg-danger">
+                <ul class="list-standard" id="issues">
+                    
+                </ul>
+            </div>
+        </footer>
     </body>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             window.timeouts = {};
+            var issues = document.getElementById("issues");
+            let code = ""
+            for (var i=0;i<200;i++) {
+                code += '<li class="text-black">';
+                code += '<i class="fas fa-exclamation-circle"></i>';
+                code += '<span>\'Heinz Baked Beans (350g)\' does not a have a supplier associated with it</span>';
+                code += '</li>';
+            }
+            issues.innerHTML = code;
+            var el = document.getElementById("product-images");
+            code = "";
+            for (var i=0;i<20;i++) {
+                code += '<div class="cell">';
+                code += '<div class="postcard">';
+                code += '<img src="https://via.placeholder.com/150" alt="product image"/>';
+                code += '<h3 class="card-title">Heinz Baked Beans (350g)</h3>';
+                code += '<p class="card-subtitle">0.99 per Unit</p>';
+                code += '</div>';
+                code += '</div>';
+            }
+            el.innerHTML = code;
+            el = document.getElementById("department-totals");
+            code = ""
+            for (var i=0;i<20;i++) {
+                code += '<li class="list-item">';
+                code += '<h3 class="list-key">Sweets</h3>';
+                code += '<div class="toggle-container">';
+                code += '<input type="checkbox" class="toggle"/>';
+                code += '</div>';
+                code += '<h2 class="list-value">10.00</h2>';
+                code += '</li>';
+            }
+            el.innerHTML = code;
             document.getElementById("searchBox").onkeyup = function() {
                 if (this.value.length == 0) {
+                    document.getElementById("alert").classList.add("hide")
                     return;
                 }
+                document.getElementById("alert").classList.remove("hide")
                 document.getElementById("searchSpinner").classList.remove("hidden");
                 clearTimeout(window.timeouts["searchSpinner"] ?? -1);
                 window.timeouts["searchSpinner"] = setTimeout(function() {
@@ -239,6 +223,36 @@
                     el.classList.add("active");
                 }
             });
+
+            window.showFooter = false;
+
+            document.getElementById("issues-tab").onclick = function() {
+                if (window.showFooter)
+                    document.getElementById("footer").classList.add("hide");
+                else
+                    document.getElementById("footer").classList.remove("hide");
+                window.showFooter = !window.showFooter;
+            }
+
+            window.showMessages = false;
+            
+            document.getElementById("messages").onclick = function() {
+                if (window.showMessages)
+                    document.getElementById("aside-right").classList.add("hide");
+                else
+                    document.getElementById("aside-right").classList.remove("hide");
+                window.showMessages = !window.showMessages;
+            }
+
+            window.showQuickMoney = false;
+            
+            document.getElementById("quick-money").onclick = function() {
+                if (window.showQuickMoney)
+                    document.getElementById("aside-left").classList.add("hide");
+                else
+                    document.getElementById("aside-left").classList.remove("hide");
+                window.showQuickMoney = !window.showQuickMoney;
+            }
             
             document.getElementById("avatar").onclick = function() {
                document.getElementById("modal").classList.remove("hidden"); 
@@ -252,7 +266,7 @@
                 document.querySelector("#aside-right .loader").classList.add("hidden");
                 document.querySelector("#aside-right .ticker").classList.remove("hidden");
                 document.querySelector("main .loader").classList.add("hidden");
-                document.querySelector("main .content").classList.remove("hidden");
+                //document.querySelector("main .content").classList.remove("hidden");
             }, 1000);
         });
     </script>

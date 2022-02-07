@@ -1,9 +1,7 @@
-$theme: ( "border":  #ccc, "active":  #2eb9f7, "default": #a6a6a6, "first":#0063B2FF, "second":#fff, "third":#fff, "white":#fff, "black":#000, "primary": #2BAE66FF, "secondary":#9CC3D5FF, "success":#00ff00, "failure":#ff0055, "alert":#ff0055, "warning":#ffff00, )
-
+$theme: ("border": #ccc, "hover":#2eb7f74f, "purple": #C58290, "active": #2eb9f7, "default": #c9c9c9, "first":#0063B2FF, "second":#82d482, "third":#fff, "blue":#2eb9f7, "white":#fff, "black":#000,"orange": #f7d12e, "gold": #FFD700, "primary": #2BAE66FF, "secondary":#82d482, "success":#00ff00, "failure":#ff0055,"danger":#ff6961,"warning":#ffff00)
+//$theme: ("border": #ccc,, "palechestnut": #C4ADAE, "russet":#7d525a, "palemauve":#A65E6E, "palesandybrown":#c5aaa0, "darkcoral":#bf6a46, "robineggblue":#67b9b6,"seagreen": #11a17b, "silver": #A2BFBD, "asparagus": #6AA36E, "airforceblue":#6c9ab1, "steelblue":#45709c, "brass":#bd9b3f,"chocolate":#c9681d,"slategrey":#6c6f82,"battleshipgrey": #9ca1a69f)
 @each $name, $color in $theme
   .bg-#{$name}
-      background-color: $color !important
-
-@each $name, $color in $theme
-  .btn-#{$name}
-    background:$color
+    background-color: $color !important
+  .text-#{$name}
+    color: $color

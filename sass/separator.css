@@ -1,0 +1,25 @@
+.separator-right {
+  display: block;
+  padding-top: 0.75rem;
+  margin-right: 1em;
+}
+.separator-right hr {
+  margin-right: -1em;
+}
+
+.separator-left {
+  display: block;
+  padding-top: 1rem;
+  margin-left: 1em;
+}
+.separator-left hr {
+  margin-left: -1em;
+}
+
+.seperator-left > label {
+  padding-left: 1rem;
+}
+
+.seperator-right > label {
+  padding-right: 1rem;
+}/*# sourceMappingURL=separator.css.map */

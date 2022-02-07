@@ -1,0 +1,307 @@
+@import url(./fonts/static/Assistant-Regular.ttf);
+body {
+  font-family: Assistant-Regular, Ubuntu, Helvetica, sans-serif;
+}
+
+.text-large {
+  font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.1rem;
+}
+
+.bg-border {
+  background-color: #ccc !important;
+}
+
+.text-border {
+  color: #ccc;
+}
+
+.bg-hover {
+  background-color: #2eb7f74f !important;
+}
+
+.text-hover {
+  color: #2eb7f74f;
+}
+
+.bg-purple {
+  background-color: #C58290 !important;
+}
+
+.text-purple {
+  color: #C58290;
+}
+
+.bg-active {
+  background-color: #2eb9f7 !important;
+}
+
+.text-active {
+  color: #2eb9f7;
+}
+
+.bg-default {
+  background-color: #c9c9c9 !important;
+}
+
+.text-default {
+  color: #c9c9c9;
+}
+
+.bg-first {
+  background-color: #0063B2FF !important;
+}
+
+.text-first {
+  color: #0063B2FF;
+}
+
+.bg-second {
+  background-color: #82d482 !important;
+}
+
+.text-second {
+  color: #82d482;
+}
+
+.bg-third {
+  background-color: #fff !important;
+}
+
+.text-third {
+  color: #fff;
+}
+
+.bg-blue {
+  background-color: #2eb9f7 !important;
+}
+
+.text-blue {
+  color: #2eb9f7;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.text-black {
+  color: #000;
+}
+
+.bg-orange {
+  background-color: #f7d12e !important;
+}
+
+.text-orange {
+  color: #f7d12e;
+}
+
+.bg-gold {
+  background-color: #FFD700 !important;
+}
+
+.text-gold {
+  color: #FFD700;
+}
+
+.bg-primary {
+  background-color: #2BAE66FF !important;
+}
+
+.text-primary {
+  color: #2BAE66FF;
+}
+
+.bg-secondary {
+  background-color: #82d482 !important;
+}
+
+.text-secondary {
+  color: #82d482;
+}
+
+.bg-success {
+  background-color: #00ff00 !important;
+}
+
+.text-success {
+  color: #00ff00;
+}
+
+.bg-failure {
+  background-color: #ff0055 !important;
+}
+
+.text-failure {
+  color: #ff0055;
+}
+
+.bg-danger {
+  background-color: #ff6961 !important;
+}
+
+.text-danger {
+  color: #ff6961;
+}
+
+.bg-warning {
+  background-color: #ffff00 !important;
+}
+
+.text-warning {
+  color: #ffff00;
+}
+
+ul:not(.tags) {
+  list-style: none;
+  padding: 0;
+}
+ul:not(.tags) li {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-family: Assistant-Regular, Ubuntu, Helvetica, sans-serif;
+  font-size: 1.25em;
+  color: #000;
+  cursor: pointer;
+  margin-top: 0.1em;
+}
+ul:not(.tags) li li:first-child {
+  margin: 0 !important;
+}
+ul:not(.tags) li li.active {
+  color: #2eb9f7;
+}
+ul:not(.tags) ul.horizontal li {
+  display: inline;
+  margin-left: 1rem;
+}
+ul:not(.tags) ul.tabs {
+  height: 2.5rem;
+  padding: 0 0.5rem 0 0.5rem;
+  margin: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  list-style: none;
+  white-space: nowrap;
+}
+ul:not(.tags) ul.tabs li {
+  display: inline-block;
+  height: 1.5rem;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  max-width: max(10vw, 20rem);
+  padding: 0.5rem 0.75rem 0.5rem 0.5rem;
+}
+ul:not(.tags) ul.list-standard {
+  height: 100%;
+  margin: 0;
+  background: #fff;
+  padding: 0;
+  overflow-y: auto;
+}
+ul:not(.tags) ul.list-standard li {
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+}
+ul:not(.tags) ul.list-standard li:hover {
+  background: #2eb9f7;
+  color: #fff;
+}
+ul:not(.tags) ul.list-standard li > i {
+  margin-right: 1rem;
+}
+ul:not(.tags) ul.selectable-list {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0;
+}
+ul:not(.tags) ul.selectable-list * {
+  color: #000;
+  font-size: 1em;
+}
+ul:not(.tags) ul.selectable-list li {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: auto 1fr 1fr;
+  grid-template-areas: "input title amount";
+  margin: 0;
+  padding: 0;
+}
+ul:not(.tags) ul.selectable-list li .list-key {
+  grid-area: title;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+ul:not(.tags) ul.selectable-list li .toggle-container {
+  grid-area: input;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul:not(.tags) ul.selectable-list li .list-value {
+  grid-area: amount;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.ticker {
+  display: block;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+.ticker * {
+  margin: 0;
+}
+.ticker .ticker-item {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "img title" "img message";
+  cursor: pointer;
+}
+.ticker .ticker-item:hover {
+  transform: scale(1.05);
+}
+.ticker .ticker-item img {
+  grid-area: img;
+  max-width: 50px;
+  max-height: 50px;
+  background-size: cover;
+  /* center the image vertically and horizontally */
+  background-position: top center;
+  border-radius: 50%;
+}
+.ticker .ticker-item .title {
+  color: #000;
+  grid-area: title;
+  margin-left: 1rem;
+  font-size: 1.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ticker .ticker-item .message {
+  color: #c9c9c9;
+  grid-area: message;
+  margin-left: 1rem;
+  font-size: 0.75em;
+}/*# sourceMappingURL=lists.css.map */
